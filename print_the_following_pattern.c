@@ -6,10 +6,17 @@ int main()
     for(i=1;i<=n;i++)
     {
         for(j=1;j<=n;j++)
-    {
-        printf("%c ",(64+i));
-    }
-    printf("
+        {
+            if(j==1 ||j==i ||i==n)
+            {
+                printf("*");
+            }
+            else
+            {
+                printf(" ");
+            }
+        }
+        printf("
 ");
     }
 }
