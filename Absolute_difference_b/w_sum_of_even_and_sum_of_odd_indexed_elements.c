@@ -1,0 +1,30 @@
+#include<stdio.h>
+int main()
+{
+    int n,i,e=0,o=0,arr[100],diff=0;
+    scanf("%d",&n);
+    for(i=0;i<=n;i++)
+    {
+        scanf("%d",&arr[i]);
+    }
+    for(i=0;i<=n;i++)
+    {
+        if(i%2==0)
+        {
+            e=e+arr[i];
+        }
+        else
+        {
+            o=o+arr[i];
+        }
+    }
+    if(e>0)
+    {
+        diff=e-o;
+    }
+    else
+    {
+        diff=o-e;
+    }
+    printf("%d",diff);
+}
