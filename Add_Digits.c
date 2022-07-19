@@ -1,24 +1,31 @@
 #include<stdio.h>
-int digsum(int n)
+int add_digits(int n)
 {
-  int sum=0;
-  
-  while(n>0 || sum>9)
-  {
-      if(n==0)
-      {
-          n=sum;
-          sum=0;
-    }
-      sum+=n%10;
-      n/=10;
-  }
-  return sum;
+    int sum=0,d;
+    while(n!=0)
+    
+    {
+        d=n%10;
+        n=n/10;
+        sum=sum+d;
+            
+        }
+        if(sum<10)
+        {
+    
+    return sum;
+}
+return add_digits(sum);
 }
 int main()
 {
-    int n;
+    int n,k;
     scanf("%d",&n);
-    printf("%d",digsum(digsum(n)));
-    return 0;
-}
+    
+    
+        k=add_digits(n);
+    
+            printf("%d",k);
+        }
+        
+    
