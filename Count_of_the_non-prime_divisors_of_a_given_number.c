@@ -1,35 +1,42 @@
 #include<stdio.h>
-int prime(int n)
+int non_prime(int *arr,int p)
+
 {
-    if(n==1)
+    int i,k=0,c=0,j,h;
+    for(i=0;i<p;i++)
     {
-        return 0;
-        
-    }
-    int i;
-    for(i=2;i<n;i++)
+    for(j=1;j<=arr[i];j++)
     {
-        if(n%i==0)
-        {
-            return 1;
-            
-        }
+    
+            if(arr[i]%j==0)
+            {
+              c++;
+            }
     }
-    return 0;
+    if(c==2)
+    {
+        k++;
+    }
+    c=0;
+}
+h=p-k;
+return h;
 }
 int main()
 {
-    int n,c=0;
+    int n,i,arr[100],p=0,h,k;
     scanf("%d",&n);
-    for(int i=2;i<n;i++)
+    for(i=1;i<=n;i++)
     {
         if(n%i==0)
         {
-            if(prime(i))
-            {
-                c++;
-            }
+            p++;
+            arr[k]=i;
+            k++;
         }
     }
-    printf("%d",c+2);
+    h=non_prime(arr,p);
+
+    printf("%d",h);
+    
 }
